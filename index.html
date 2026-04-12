@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>BEACON | Cosmic Yoga → Mountain Trek</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@200;300;400;500;600;700;800&family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+        <!-- ===== PRELOADER ANIMATION ===== -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-container">
+            <div class="preloader-logo">
+                <span class="preloader-icon">⛧</span>
+                <span class="preloader-text">BEACON</span>
+            </div>
+            <div class="preloader-mandala">
+                <div class="mandala-ring ring-1"></div>
+                <div class="mandala-ring ring-2"></div>
+                <div class="mandala-ring ring-3"></div>
+                <div class="mandala-center">◠</div>
+            </div>
+            <div class="preloader-message" id="preloaderMessage">Awakening your journey...</div>
+            <div class="preloader-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="preloader-percent" id="preloaderPercent">0%</div>
+        </div>
+    </div>
+    <!-- Floating particles -->
+    <div class="particle" style="left: 10%; top: 10%; animation: floatParticle 20s linear infinite;"></div>
+    <div class="particle" style="left: 30%; top: 20%; animation: floatParticle 25s linear infinite 5s;"></div>
+    <div class="particle" style="left: 50%; top: 15%; animation: floatParticle 18s linear infinite 2s;"></div>
+    <div class="particle" style="left: 70%; top: 30%; animation: floatParticle 22s linear infinite 8s;"></div>
+    <div class="particle" style="left: 90%; top: 25%; animation: floatParticle 30s linear infinite 3s;"></div>
+    <div class="particle" style="left: 20%; top: 70%; animation: floatParticle 24s linear infinite 1s;"></div>
+    <div class="particle" style="left: 80%; top: 80%; animation: floatParticle 28s linear infinite 6s;"></div>
+
+    <!-- Background layers -->
+    <div class="bg-cosmic" id="bgCosmic"></div>
+    <div class="bg-mountain" id="bgMountain"></div>
+
+    <!-- BEACON SECTION -->
+    <div class="beacon-container">
+        <div class="rotating-square"></div>
+        <div class="rotating-square-inner"></div>
+        <div class="rotating-square-small"></div>
+        
+        <div class="corner-dot corner-dot-1"></div>
+        <div class="corner-dot corner-dot-2"></div>
+        <div class="corner-dot corner-dot-3"></div>
+        <div class="corner-dot corner-dot-4"></div>
+        
+        <div class="grid-pattern"></div>
+        
+        <div class="square-particle" style="top: 30%; left: 20%; animation: floatParticle 8s linear infinite;"></div>
+        <div class="square-particle" style="top: 70%; left: 60%; animation: floatParticle 12s linear infinite 2s;"></div>
+        <div class="square-particle" style="top: 40%; left: 80%; animation: floatParticle 10s linear infinite 4s;"></div>
+        <div class="square-particle" style="top: 80%; left: 30%; animation: floatParticle 15s linear infinite 1s;"></div>
+        <div class="square-particle" style="top: 20%; left: 70%; animation: floatParticle 9s linear infinite 3s;"></div>
+        
+        <div class="beacon-word">
+            <span class="beacon-letter" style="--char-index:0">B</span>
+            <span class="beacon-letter" style="--char-index:1">E</span>
+            <span class="beacon-letter" style="--char-index:2">A</span>
+            <span class="beacon-letter" style="--char-index:3">C</span>
+            <span class="beacon-letter" style="--char-index:4">O</span>
+            <span class="beacon-letter" style="--char-index:5">N</span>
+        </div>
+        <div class="beacon-tagline">YOUR WELLNESS DESTINATION</div>
+    </div>
+<!-- ===== NAVIGATION BAR ===== -->
+<nav class="glass-navbar" id="mainNavbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <span class="nav-logo-text">⛧ BEACON ⛧</span>
+        </div>
+                    <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#practice" class="nav-link" data-section="practice">
+                        <span class="nav-icon">🧘</span>
+                        <span class="nav-text">Practice</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#yogaSection" class="nav-link" data-section="yoga">
+                        <span class="nav-icon">🌀</span>
+                        <span class="nav-text">Yoga</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#mountainSection" class="nav-link" data-section="trek">
+                        <span class="nav-icon">🏔️</span>
+                        <span class="nav-text">Trek</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cyclingSection" class="nav-link" data-section="cycle">
+                        <span class="nav-icon">🚴</span>
+                        <span class="nav-text">Cycle</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#schedule" class="nav-link" data-section="schedule">
+                        <span class="nav-icon">📅</span>
+                        <span class="nav-text">Schedule</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#team" class="nav-link" data-section="team">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">Team</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <span class="nav-icon">📞</span>
+                        <span class="nav-text">Connect</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="loginBtn">
+                        <span class="nav-icon">🔐</span>
+                        <span class="nav-text">Login</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="signupBtn">
+                        <span class="nav-icon">✨</span>
+                        <span class="nav-text">Sign Up</span>
+                    </a>
+                </li>
+            </ul>
+        <div class="nav-toggle" id="navToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+<!-- ===== THREE PILLARS SECTION ===== -->
+<section class="three-pillars-section" id="threePillars">
+    <div class="pillars-container">
+        <div class="pillars-grid">
+            
+            <!-- Pillar 1: Physical Aesthetic -->
+            <div class="pillar-card" data-pillar="physical">
+                <div class="pillar-icon">
+                    <span>💪</span>
+                </div>
+                <h3 class="pillar-title">PHYSICAL AESTHETIC</h3>
+                <p class="pillar-description">Carve the new you where every glance in the mirror tells a new story—stronger, bolder, better.</p>
+                <div class="pillar-glow"></div>
+            </div>
+            
+            <!-- Pillar 2: Moral & Mental Aesthetic -->
+            <div class="pillar-card" data-pillar="mental">
+                <div class="pillar-icon">
+                    <span>🧠</span>
+                </div>
+                <h3 class="pillar-title">MORAL & MENTAL AESTHETIC</h3>
+                <p class="pillar-description">It's more than workouts—it's shared growth, mutual respect, and a culture that lifts everyone together.</p>
+                <div class="pillar-glow"></div>
+            </div>
+            
+            <!-- Pillar 3: Spiritualism -->
+            <div class="pillar-card" data-pillar="spiritual">
+                <div class="pillar-icon">
+                    <span>🕉️</span>
+                </div>
+                <h3 class="pillar-title">SPIRITUALISM</h3>
+                <p class="pillar-description">True wellness begins within—calm the mind, and the body naturally follows.</p>
+                <div class="pillar-glow"></div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+    <!-- EXISTING CONTENT -->
+    <div class="container" id="practice">
+    <!-- Watermark logos (background) -->
+    <img src="Assests/logo.jpg" alt="Logo Watermark" class="watermark-logo">
+    
+    <!-- LEFT SIDE: Fan Cards -->
+    <div class="fan-cards-container">
+        <div class="wrap">
+            <div style="--i:-1" class="container1"><img src="Assests/old.jpg" alt="WOMENS"></div>
+            <div style="--i:0" class="container1"><img src="Assests/coorporate.jpg" alt="COORPORATE PERSONS"></div>
+            <div style="--i:1" class="container1"><img src="Assests/womens.jpg" alt="OLD PERSONS"></div>
+        </div>
+    </div>
+    
+    
+    <!-- RIGHT SIDE: Quote -->
+    <div class="quote-container">
+        <p id="quote">STRONGER BODY.<br>CLEARER MIND.<br>DEEPER PEACE.</p>
+    </div>
+</div>
+<!-- ===== WHO WE SERVE SECTION ===== -->
+<section class="who-we-serve-section" id="whoWeServe">
+    <div class="serve-container">
+        <div class="serve-header">
+            <h2 class="serve-title">WHO WE SERVE</h2>
+            <p class="serve-subtitle">Different lives, different needs — one purpose: a healthier, happier you.</p>
+        </div>
+        
+        <div class="serve-grid">
+            <!-- Card 1: Corporate Professionals -->
+            <div class="serve-card" data-audience="corporate">
+                <div class="serve-icon">
+                    <span>💼</span>
+                </div>
+                <h3 class="serve-card-title">CORPORATE<br>PROFESSIONALS</h3>
+                <p class="serve-card-description">Reverse the silent damage of long screen hours. Reclaim your energy and focus.</p>
+                <div class="serve-card-glow"></div>
+            </div>
+            
+            <!-- Card 2: Elders -->
+            <div class="serve-card" data-audience="elders">
+                <div class="serve-icon">
+                    <span>👴</span>
+                </div>
+                <h3 class="serve-card-title">ELDERS</h3>
+                <p class="serve-card-description">Turn lonely routines into joyful, shared experiences. Stay active, stay connected.</p>
+                <div class="serve-card-glow"></div>
+            </div>
+            
+            <!-- Card 3: Housewives -->
+            <div class="serve-card" data-audience="housewives">
+                <div class="serve-icon">
+                    <span>🏠</span>
+                </div>
+                <h3 class="serve-card-title">HOUSEWIVES</h3>
+                <p class="serve-card-description">Finally prioritize your own well-being. You deserve this moment of self-care.</p>
+                <div class="serve-card-glow"></div>
+            </div>
+            
+            <!-- Card 4: Students & Sports Pros -->
+            <div class="serve-card" data-audience="students">
+                <div class="serve-icon">
+                    <span>🎓</span>
+                </div>
+                <h3 class="serve-card-title">STUDENTS &<br>SPORTS PROS</h3>
+                <p class="serve-card-description">Build strength, discipline, and peak performance. Train like a champion.</p>
+                <div class="serve-card-glow"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== DIGITAL LIBRARY SECTION ===== -->
+<section class="digital-library-section" id="digitalLibrary">
+    <div class="library-container">
+        
+        <!-- Fullscreen Video Container -->
+        <div class="fullscreen-video-wrapper" id="fullscreenVideoWrapper">
+            <video id="mainBookVideo" class="fullscreen-book-video" autoplay muted playsinline>
+                <source src="Assests/mb.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+            <div class="video-glow"></div>
+        </div>
+        
+        <!-- Final Book Cards (Appear after video ends) -->
+        <div class="books-grid-final" id="booksGridFinal">
+            <div class="book-card-final" data-category="fitness">
+                <div class="book-icon-final">💪</div>
+                <div class="book-badge-final fitness">FITNESS</div>
+                <h3>The Functional Body</h3>
+                <p>Science-backed workouts for real results</p>
+                <div class="card-buttons-final">
+                    <button class="btn-read-final" onclick="readBookFinal('fitness')">📖 Read Online</button>
+                    <button class="btn-download-final" onclick="downloadBookFinal('fitness')">⬇️ Download PDF</button>
+                </div>
+            </div>
+            
+            <div class="book-card-final" data-category="nutrition">
+                <div class="book-icon-final">🥗</div>
+                <div class="book-badge-final nutrition">NUTRITION</div>
+                <h3>Eat for Energy</h3>
+                <p>Simple nutrition for busy lives</p>
+                <div class="card-buttons-final">
+                    <button class="btn-read-final" onclick="readBookFinal('nutrition')">📖 Read Online</button>
+                    <button class="btn-download-final" onclick="downloadBookFinal('nutrition')">⬇️ Download PDF</button>
+                </div>
+            </div>
+            
+            <div class="book-card-final" data-category="mental">
+                <div class="book-icon-final">🧘</div>
+                <div class="book-badge-final mental">MENTAL WELLNESS</div>
+                <h3>The Calm Mind</h3>
+                <p>Stress management for modern world</p>
+                <div class="card-buttons-final">
+                    <button class="btn-read-final" onclick="readBookFinal('mental')">📖 Read Online</button>
+                    <button class="btn-download-final" onclick="downloadBookFinal('mental')">⬇️ Download PDF</button>
+                </div>
+            </div>
+            
+            <div class="book-card-final" data-category="spiritual">
+                <div class="book-icon-final">🕉️</div>
+                <div class="book-badge-final spiritual">SPIRITUALITY</div>
+                <h3>Inner Peace, Outer Strength</h3>
+                <p>Daily mindfulness practices</p>
+                <div class="card-buttons-final">
+                    <button class="btn-read-final" onclick="readBookFinal('spiritual')">📖 Read Online</button>
+                    <button class="btn-download-final" onclick="downloadBookFinal('spiritual')">⬇️ Download PDF</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+    <div class="video-container">
+    <video class="infra" autoplay muted loop playsinline controls>
+        <source src="Assests/infrastructure.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <video class="infra" autoplay muted loop playsinline controls>
+        <source src="Assests/infrastructure1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <video class="infra" autoplay muted loop playsinline controls>
+        <source src="Assests/infrastructure2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+    <!-- COACH CAROUSEL SECTION -->
+<div class="coach-carousel-section" id="team">
+    <div class="instructors-heading">✦ MEET THE INSTRUCTORS ✦</div>
+    <div class="vertical-beam"></div>
+    <div class="beam-glow"></div>
+    <div class="beam-base"></div>
+    <div class="beam-particle beam-particle-1"></div>
+    <div class="beam-particle beam-particle-2"></div>
+    <div class="beam-particle beam-particle-3"></div>
+    <div class="beam-particle beam-particle-4"></div>
+    
+    <div class="coach-track" style="top: 10%;">
+        <div class="coach-marquee">
+            <div class="coach-card-horizontal">
+                <div class="coach-horizontal-image"><img src="Assests/trainer.jpg" alt="Coach Alex"></div>
+                <div class="coach-horizontal-name">A</div>
+                <div class="coach-horizontal-title">STRENGTH</div>
+                <div class="coach-horizontal-specialty">HIIT</div>
+            </div>
+            <div class="coach-card-horizontal">
+                <div class="coach-horizontal-image"><img src="Assests/trainer2.jpg" alt="Coach Sarah"></div>
+                <div class="coach-horizontal-name">B</div>
+                <div class="coach-horizontal-title">YOGA</div>
+                <div class="coach-horizontal-specialty">MINDFULNESS</div>
+            </div>
+            <div class="coach-card-horizontal">
+                <div class="coach-horizontal-image"><img src="Assests/trainer3.jpg" alt="Coach Mike"></div>
+                <div class="coach-horizontal-name">C</div>
+                <div class="coach-horizontal-title">NUTRITION</div>
+                <div class="coach-horizontal-specialty">WEIGHT LOSS</div>
+            </div>
+            <div class="coach-card-horizontal">
+                <div class="coach-horizontal-image"><img src="Assests/trainer.jpg" alt="Coach Alex"></div>
+                <div class="coach-horizontal-name">D</div>
+                <div class="coach-horizontal-title">STRENGTH</div>
+                <div class="coach-horizontal-specialty">HIIT</div>
+            </div>
+            <div class="coach-card-horizontal">
+                <div class="coach-horizontal-image"><img src="Assests/trainer2.jpg" alt="Coach Sarah"></div>
+                <div class="coach-horizontal-name">E</div>
+                <div class="coach-horizontal-title">YOGA</div>
+                <div class="coach-horizontal-specialty">MINDFULNESS</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="coach-track" style="top: 55%;">
+        <div class="coach-marquee-reverse">
+            <div class="coach-card-horizontal">
+                <div class="coach-horizontal-image"><img src="Assests/trainer4.jpg" alt="Coach Priya"></div>
+                <div class="coach-horizontal-name">F</div>
+                <div class="coach-horizontal-title">CARDIO</div>
+                <div class="coach-horizontal-specialty">DANCE</div>
+            </div>
+            <div class="coach-card-horizontal">
+                <div class="coach-horizontal-image"><img src="Assests/trainer5.jpg" alt="Coach David"></div>
+                <div class="coach-horizontal-name">G</div>
+                <div class="coach-horizontal-title">RECOVERY</div>
+                <div class="coach-horizontal-specialty">THERAPY</div>
+            </div>
+            <div class="coach-card-horizontal">
+                <div class="coach-horizontal-image"><img src="Assests/trainer6.jpg" alt="Coach Lisa"></div>
+                <div class="coach-horizontal-name">H</div>
+                <div class="coach-horizontal-title">BOXING</div>
+                <div class="coach-horizontal-specialty">CONDITIONING</div>
+            </div>
+            <div class="coach-card-horizontal">
+                <div class="coach-horizontal-image"><img src="Assests/trainer4.jpg" alt="Coach Priya"></div>
+                <div class="coach-horizontal-name">I</div>
+                <div class="coach-horizontal-title">CARDIO</div>
+                <div class="coach-horizontal-specialty">DANCE</div>
+            </div>
+            <div class="coach-card-horizontal">
+                <div class="coach-horizontal-image"><img src="Assests/trainer5.jpg" alt="Coach David"></div>
+                <div class="coach-horizontal-name">J</div>
+                <div class="coach-horizontal-title">RECOVERY</div>
+                <div class="coach-horizontal-specialty">THERAPY</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ===== MEMBERSHIP PLANS SECTION ===== -->
+<section class="membership-section" id="membership">
+    <div class="membership-container">
+        <div class="membership-header">
+            <h2 class="membership-title">MEMBERSHIP PLANS</h2>
+            <p class="membership-subtitle">Choose the plan that fits your journey</p>
+        </div>
+        
+        <div class="plans-grid">
+            <!-- Plan 1: Basic -->
+            <div class="plan-card" data-plan="basic">
+                <div class="plan-icon">💪</div>
+                <h3 class="plan-name">BASIC</h3>
+                <div class="plan-price">
+                    <span class="price-currency">₹</span>
+                    <span class="price-amount">999</span>
+                    <span class="price-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>✓ Gym Access</li>
+                    <li>✓ Locker Room</li>
+                    <li>✓ Basic Classes</li>
+                    <li>✓ Free Wi-Fi</li>
+                </ul>
+                <button class="plan-btn" onclick="selectPlan('basic')">JOIN NOW →</button>
+                <div class="plan-glow"></div>
+            </div>
+            
+            <!-- Plan 2: Pro (Popular) -->
+            <div class="plan-card popular" data-plan="pro">
+                <div class="popular-badge">🔥 MOST POPULAR</div>
+                <div class="plan-icon">🔥</div>
+                <h3 class="plan-name">PRO</h3>
+                <div class="plan-price">
+                    <span class="price-currency">₹</span>
+                    <span class="price-amount">1,999</span>
+                    <span class="price-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>✓ Everything in Basic</li>
+                    <li>✓ All Group Classes</li>
+                    <li>✓ Personal Trainer</li>
+                    <li>✓ Custom Diet Plan</li>
+                    <li>✓ Priority Support</li>
+                </ul>
+                <button class="plan-btn" onclick="selectPlan('pro')">JOIN NOW →</button>
+                <div class="plan-glow"></div>
+            </div>
+            
+            <!-- Plan 3: Family -->
+            <div class="plan-card" data-plan="family">
+                <div class="plan-icon">👨‍👩‍👧</div>
+                <h3 class="plan-name">FAMILY</h3>
+                <div class="plan-price">
+                    <span class="price-currency">₹</span>
+                    <span class="price-amount">3,499</span>
+                    <span class="price-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>✓ Up to 4 Members</li>
+                    <li>✓ Everything in Pro</li>
+                    <li>✓ Family Challenges</li>
+                    <li>✓ Kids Fitness Area</li>
+                    <li>✓ Best Value Plan</li>
+                </ul>
+                <button class="plan-btn" onclick="selectPlan('family')">JOIN NOW →</button>
+                <div class="plan-glow"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== TESTIMONIALS SECTION ===== -->
+<section class="testimonials-section" id="testimonials">
+    <div class="testimonials-container">
+        <div class="testimonials-header">
+            <h2 class="testimonials-title">MEMBER STORIES</h2>
+            <p class="testimonials-subtitle">Real people, real transformations</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">"BEACON transformed my life. The trainers are amazing and the community keeps me motivated. Lost 20kg in 6 months!"</p>
+                <div class="star-rating">★★★★★</div>
+                <div class="testimonial-author">
+                    <span class="author-name">— Rajesh S.</span>
+                    <span class="author-achievement">Lost 20kg</span>
+                </div>
+                <div class="testimonial-glow"></div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">"The yoga sessions helped me find peace after stressful workdays. My mental clarity has improved dramatically."</p>
+                <div class="star-rating">★★★★★</div>
+                <div class="testimonial-author">
+                    <span class="author-name">— Priya M.</span>
+                    <span class="author-achievement">Stress Free</span>
+                </div>
+                <div class="testimonial-glow"></div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">"Completed my first Himalayan trek thanks to the mountain training program. BEACON made the impossible possible!"</p>
+                <div class="star-rating">★★★★★</div>
+                <div class="testimonial-author">
+                    <span class="author-name">— Amit K.</span>
+                    <span class="author-achievement">Trek Ready</span>
+                </div>
+                <div class="testimonial-glow"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== INCENTIVES & CHALLENGES SECTION ===== -->
+<section class="incentives-section" id="incentives">
+    <div class="incentives-container">
+        <div class="incentives-header">
+            <h2 class="incentives-title">BEYOND THE GYM</h2>
+            <p class="incentives-subtitle">Adventures, challenges, and rewards that keep you motivated</p>
+        </div>
+        
+        <div class="incentives-grid">
+            <!-- Card 1: Weekly Cycling -->
+            <div class="incentive-card">
+                <div class="incentive-icon">🚴</div>
+                <h3 class="incentive-name">Weekly Cycling</h3>
+                <p class="incentive-description">Curated routes every weekend. Explore the city with your tribe.</p>
+                <div class="incentive-glow"></div>
+            </div>
+            
+            <!-- Card 2: Trekking Events -->
+            <div class="incentive-card">
+                <div class="incentive-icon">⛰️</div>
+                <h3 class="incentive-name">Trekking Events</h3>
+                <p class="incentive-description">Monthly mountain expeditions. Push your limits in nature.</p>
+                <div class="incentive-glow"></div>
+            </div>
+            
+            <!-- Card 3: Group Challenges -->
+            <div class="incentive-card">
+                <div class="incentive-icon">🏆</div>
+                <h3 class="incentive-name">Group Challenges</h3>
+                <p class="incentive-description">Compete, collaborate, celebrate. Win exciting prizes.</p>
+                <div class="incentive-glow"></div>
+            </div>
+            
+            <!-- Card 4: Rewards -->
+            <div class="incentive-card">
+                <div class="incentive-icon">🎁</div>
+                <h3 class="incentive-name">Rewards</h3>
+                <p class="incentive-description">Smartwatches, earbuds, movie tickets for top performers.</p>
+                <div class="incentive-glow"></div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- ===== CLASS SCHEDULE SECTION ===== -->
+    <section class="schedule-section" id="schedule">
+        <div class="schedule-container">
+            <div class="schedule-header">
+                <h2 class="schedule-title">CLASS SCHEDULE</h2>
+                <p class="schedule-subtitle">Find your perfect time to train</p>
+            </div>
+            
+            <div class="schedule-table-wrapper">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>TIME</th>
+                            <th>MONDAY</th>
+                            <th>TUESDAY</th>
+                            <th>WEDNESDAY</th>
+                            <th>THURSDAY</th>
+                            <th>FRIDAY</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-slot">6:00 AM</td>
+                            <td class="yoga">🧘 Yoga</td>
+                            <td class="cycling">🚴 Cycling</td>
+                            <td class="yoga">🧘 Yoga</td>
+                            <td class="cycling">🚴 Cycling</td>
+                            <td class="yoga">🧘 Yoga</td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">7:00 AM</td>
+                            <td class="cycling">🚴 Cycling</td>
+                            <td class="yoga">🧘 Yoga</td>
+                            <td class="hitt">💪 HIIT</td>
+                            <td class="yoga">🧘 Yoga</td>
+                            <td class="cycling">🚴 Cycling</td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">5:00 PM</td>
+                            <td class="hitt">💪 HIIT</td>
+                            <td class="hitt">💪 HIIT</td>
+                            <td class="cycling">🚴 Cycling</td>
+                            <td class="hitt">💪 HIIT</td>
+                            <td class="hitt">💪 HIIT</td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">6:00 PM</td>
+                            <td class="dance">💃 Zumba</td>
+                            <td class="boxing">🥊 Boxing</td>
+                            <td class="dance">💃 Zumba</td>
+                            <td class="boxing">🥊 Boxing</td>
+                            <td class="dance">💃 Zumba</td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">7:00 PM</td>
+                            <td class="trek">🏔️ Trek Prep</td>
+                            <td class="trek">🏔️ Trek Prep</td>
+                            <td class="trek">🏔️ Trek Prep</td>
+                            <td class="trek">🏔️ Trek Prep</td>
+                            <td class="trek">🏔️ Trek Prep</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="schedule-weekend">
+                <div class="weekend-icon">⭐</div>
+                <div class="weekend-text">
+                    <strong>Weekend Specials</strong>
+                    <p>Saturday & Sunday - 7:00 AM | Group Rides & Trekking Events</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- YOGA FIGURE (Akan.png) - appears after coach section -->
+    <div class="figure-wrapper yoga-figure-wrapper" id="yogaFigureWrapper">
+        <img src="Assests/Akan.png" alt="Yoga Meditation" id="yogaFigure">
+    </div>
+
+    <!-- COSMIC YOGA SECTION -->
+    <section class="cosmic-section" id="cosmicSection">
+        <div class="cosmic-overlay"></div>
+        <div class="floating-mandala"></div>
+        <div class="cosmic-container">
+            <div class="mantra-section" id="yogaMantra">
+                <h1>BEYOND THE VEIL OF FORM</h1>
+                <div class="mantra-line">𓋴 the silence between thoughts is where the cosmos speaks 𓋴</div>
+            </div>
+            <div class="cards-section" id="yogaCards">
+                <div class="card-collection">
+                    <div class="cosmic-card" data-modal="pulse"><div class="card-icon">🌀</div><h3>Cosmic Pulse</h3><p>Your essence vibrates with the eternal hum of creation</p></div>
+                    <div class="cosmic-card" data-modal="chakra"><div class="card-icon">🌌</div><h3>Stellar Path</h3><p>Every step is a dance between shadow and starlight</p></div>
+                    <div class="cosmic-card" data-modal="mandala"><div class="card-icon">✨</div><h3>Sacred Visions</h3><p>Witness the geometry of your infinite soul</p></div>
+                    <div class="cosmic-card" data-modal="eternal"><div class="card-icon">🕉️</div><h3>Eternal Circle</h3><p>Return to source. All paths lead home.</p></div>
+                </div>
+            </div>
+            <div class="portal-section" id="yogaPortals">
+                <h2>PORTALS OF CONSCIOUSNESS</h2>
+                <div class="sacred-portals">
+                    <div class="portal" data-modal="intuition"><span>🌙</span><span>INTUITION</span></div>
+                    <div class="portal" data-modal="radiance"><span>☀️</span><span>RADIANCE</span></div>
+                    <div class="portal" data-modal="wisdom"><span>⭐</span><span>WISDOM</span></div>
+                    <div class="portal" data-modal="awakening"><span>🪷</span><span>AWAKENING</span></div>
+                </div>
+            </div>
+            <div class="wisdom-quote" id="yogaQuote">
+                <p>"When you touch the eternal, the eternal touches you back"</p>
+                <div class="author">— Sacred Geometry —</div>
+            </div>
+            <div class="footer-section" id="yogaFooter">
+                <p>𓂀 breathe · surrender · become 𓂀</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TREKKING FIGURE (Aaenu.png) - appears after cosmic section ends -->
+    <div class="figure-wrapper trekking-figure-wrapper" id="trekkingFigureWrapper">
+        <img src="Assests/Aaenu.png" alt="Trekking Adventure" id="trekkingFigure">
+    </div>
+
+    <!-- MOUNTAINEERING SECTION -->
+    <section class="mountain-section" id="mountainSection">
+        <div class="mountain-overlay"></div>
+        <div class="floating-peak"></div>
+        <div class="mountain-container">
+            <div class="mantra-section" id="mountainMantra">
+                <h1>THE SUMMIT WITHIN</h1>
+                <div class="mantra-line">⛰️ the mountain is not the destination — you are ⛰️</div>
+            </div>
+            <div class="cards-section" id="mountainCards">
+                <div class="card-collection">
+                    <div class="mountain-card" data-modal="basecamp"><div class="card-icon">🏔️</div><h3>Base Camp</h3><p>Preparation is the foundation of every summit</p></div>
+                    <div class="mountain-card" data-modal="ascent"><div class="card-icon">⛰️</div><h3>The Ascent</h3><p>Each step upward is a prayer to the mountain</p></div>
+                    <div class="mountain-card" data-modal="peak"><div class="card-icon">🏔️</div><h3>Peak Moment</h3><p>The summit reveals what you carried within</p></div>
+                    <div class="mountain-card" data-modal="descent"><div class="card-icon">🌄</div><h3>Descent Wisdom</h3><p>Coming down is where the real journey begins</p></div>
+                </div>
+            </div>
+            <div class="portal-section" id="mountainPortals">
+                <h2>PORTS OF THE MOUNTAIN</h2>
+                <div class="sacred-portals">
+                    <div class="portal" data-modal="altitude"><span>❄️</span><span>ALTITUDE</span></div>
+                    <div class="portal" data-modal="navigation"><span>🧭</span><span>NAVIGATION</span></div>
+                    <div class="portal" data-modal="endurance"><span>💪</span><span>ENDURANCE</span></div>
+                    <div class="portal" data-modal="summitmind"><span>🧘</span><span>SUMMIT MIND</span></div>
+                </div>
+            </div>
+            <div class="wisdom-quote" id="mountainQuote">
+                <p>"Mountains teach the art of letting go — of expectations, of fear, of the self"</p>
+                <div class="author">— High Altitude Wisdom —</div>
+            </div>
+            <div class="footer-section" id="mountainFooter">
+                <p>⛰️ breathe · step · ascend · return ⛰️</p>
+            </div>
+        </div>
+    </section>
+    <!-- ===== CYCLING FIGURE ===== -->
+    <div class="figure-wrapper cycling-figure-wrapper" id="cyclingFigureWrapper">
+        <img src="Assests/golu.png" alt="Cycling Adventure" id="cyclingFigure">
+    </div>
+
+
+    <!-- ===== CYCLING SECTION ===== -->
+    <section class="cycling-section" id="cyclingSection">
+        <div class="cycling-overlay"></div>
+        <div class="floating-road"></div>
+        <div class="cycling-container">
+            <div class="mantra-section" id="cyclingMantra">
+                <h1>THE OPEN ROAD</h1>
+                <div class="mantra-line">⛧ every pedal stroke is a step toward freedom ⛧</div>
+            </div>
+            <div class="cards-section" id="cyclingCards">
+                <div class="card-collection">
+                    <div class="cycling-card" data-modal="weeklyrides"><div class="card-icon">🚴</div><h3>Weekly Rides</h3><p>Curated routes every weekend. All skill levels welcome.</p></div>
+                    <div class="cycling-card" data-modal="pace"><div class="card-icon">🏁</div><h3>Pace Challenges</h3><p>Push your limits. Track your speed and endurance.</p></div>
+                    <div class="cycling-card" data-modal="races"><div class="card-icon">🏆</div><h3>Race Events</h3><p>Monthly competitions with exciting prizes.</p></div>
+                    <div class="cycling-card" data-modal="club"><div class="card-icon">👥</div><h3>Cycling Club</h3><p>Find your riding tribe. Group rides build bonds.</p></div>
+                </div>
+            </div>
+            <div class="portal-section" id="cyclingPortals">
+                <h2>CYCLING PORTS</h2>
+                <div class="sacred-portals">
+                    <div class="portal cycling-portal" data-modal="gear"><span>🛞</span><span>GEAR GUIDE</span></div>
+                    <div class="portal cycling-portal" data-modal="routes"><span>📊</span><span>ROUTE MAPS</span></div>
+                    <div class="portal cycling-portal" data-modal="training"><span>💪</span><span>TRAINING</span></div>
+                    <div class="portal cycling-portal" data-modal="community"><span>🎽</span><span>COMMUNITY</span></div>
+                </div>
+            </div>
+            <div class="wisdom-quote" id="cyclingQuote">
+                <p>"It never gets easier, you just go faster."</p>
+                <div class="author">— Greg LeMond —</div>
+            </div>
+            <div class="footer-section" id="cyclingFooter">
+                <p>🚴‍♂️ ride · push · conquer · repeat 🚴‍♀️</p>
+            </div>
+        </div>
+    </section>
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 class="contact-title">CONTACT US</h2>
+                <p class="contact-subtitle">We'd love to hear from you</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Left Column: Contact Form -->
+                <div class="contact-form-col">
+                    <h3 class="contact-col-title">SEND US A MESSAGE</h3>
+                    <form id="contactForm" class="contact-form" onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" id="contactName" placeholder=" " required>
+                            <label>Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="contactEmail" placeholder=" " required>
+                            <label>Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="contactPhone" placeholder=" " required>
+                            <label>Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contactMessage" rows="4" placeholder=" " required></textarea>
+                            <label>Your Message</label>
+                        </div>
+                        <button type="submit" class="contact-submit-btn">SEND MESSAGE →</button>
+                    </form>
+                </div>
+                
+                <!-- Right Column: Contact Info -->
+                <div class="contact-info-col">
+                    <h3 class="contact-col-title">GET IN TOUCH</h3>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-icon">📍</span>
+                            <div class="contact-detail-text">
+                                <strong>Address</strong>
+                                <p>Bareilly, Uttar Pradesh, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-icon">📞</span>
+                            <div class="contact-detail-text">
+                                <strong>Phone</strong>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-icon">✉️</span>
+                            <div class="contact-detail-text">
+                                <strong>Email</strong>
+                                <p>hello@beaconwellness.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-icon">🕘</span>
+                            <div class="contact-detail-text">
+                                <strong>Working Hours</strong>
+                                <p>Monday - Sunday: 6:00 AM - 10:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="contact-social">
+                        <h4>Follow Us</h4>
+                        <div class="contact-social-icons">
+                            <a href="#" class="contact-social-icon" aria-label="Facebook">📘</a>
+                            <a href="#" class="contact-social-icon" aria-label="Instagram">📷</a>
+                            <a href="#" class="contact-social-icon" aria-label="Twitter">🐦</a>
+                            <a href="#" class="contact-social-icon" aria-label="YouTube">🎥</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Google Map (Optional) -->
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113801.3198557375!2d79.356009!3d28.367895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0791e0f5b9e0b%3A0x2b8e5b8e5b8e5b8e!2sBareilly%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="200" 
+                            style="border:0; border-radius: 20px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Scroll hint -->
+    <div class="scroll-hint" id="scrollHint">↓ SCROLL TO BEGIN THE JOURNEY ↓</div>
+        <!-- ===== MAIN SITE FOOTER ===== -->
+    <footer class="main-site-footer">
+        <div class="main-footer-container">
+            <div class="main-footer-grid">
+                <div class="main-footer-col">
+                    <h3>⛧ BEACON</h3>
+                    <p>Your Wellness Destination</p>
+                    <p>Transform your body, calm your mind, and elevate your spirit with India's most holistic wellness community.</p>
+                    <div class="social-icons-list">
+                        <a href="#">📘</a>
+                        <a href="#">📷</a>
+                        <a href="#">🐦</a>
+                        <a href="#">🎥</a>
+                    </div>
+                </div>
+                <div class="main-footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="#practice">Practice</a></li>
+                        <li><a href="#team">Meet the Team</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#cosmicSection">Cosmic Journey</a></li>
+                        <li><a href="#mountainSection">Mountain Trek</a></li>
+                        <li><a href="#cyclingSection">Cycling</a></li>
+                    </ul>
+                </div>
+                <div class="main-footer-col">
+                    <h4>CONTACT</h4>
+                    <ul class="contact-list">
+                        <li><span class="contact-icon">📍</span> Bareilly, Uttar Pradesh, India</li>
+                        <li><span class="contact-icon">📞</span> +91 98765 43210</li>
+                        <li><span class="contact-icon">✉️</span> hello@beaconwellness.com</li>
+                        <li><span class="contact-icon">🕘</span> Mon-Sun: 6:00 AM - 10:00 PM</li>
+                    </ul>
+                </div>
+                <div class="main-footer-col">
+                    <h4>NEWSLETTER</h4>
+                    <p>Subscribe for updates, offers, and wellness tips.</p>
+                    <form class="newsletter-form-main" onsubmit="handleNewsletterMain(event)">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">SUBSCRIBE →</button>
+                    </form>
+                    <p style="font-size: 0.7rem; color: #6a6f8a; margin-top: 10px;">No spam. Unsubscribe anytime.</p>
+                </div>
+            </div>
+            <div class="footer-bottom-main">
+                <p>&copy; 2024 BEACON Wellness. All rights reserved.</p>
+                <div class="footer-bottom-links-main">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <!-- ===== REGISTRATION/LOGIN MODAL ===== -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-modal-content">
+            <div class="auth-modal-header">
+                <div class="auth-logo">
+                    <span class="auth-logo-icon">⛧</span>
+                    <span class="auth-logo-text">BEACON</span>
+                </div>
+                <button class="auth-close" id="closeAuthModal">&times;</button>
+            </div>
+            
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">LOGIN</button>
+                <button class="auth-tab" data-tab="signup">SIGN UP</button>
+            </div>
+            
+            <!-- Login Form -->
+            <div id="loginForm" class="auth-form active">
+                <div class="auth-input-group">
+                    <input type="email" id="loginEmail" placeholder=" " required>
+                    <label>Email Address</label>
+                </div>
+                <div class="auth-input-group">
+                    <input type="password" id="loginPassword" placeholder=" " required>
+                    <label>Password</label>
+                </div>
+                <div class="auth-options">
+                    <label class="auth-checkbox">
+                        <input type="checkbox"> Remember Me
+                    </label>
+                    <a href="#" class="auth-forgot">Forgot Password?</a>
+                </div>
+                <button class="auth-submit" onclick="handleLogin()">LOGIN →</button>
+                <p class="auth-switch-text">Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+            </div>
+            
+            <!-- Sign Up Form -->
+            <div id="signupForm" class="auth-form">
+                <div class="auth-input-group">
+                    <input type="text" id="signupName" placeholder=" " required>
+                    <label>Full Name</label>
+                </div>
+                <div class="auth-input-group">
+                    <input type="email" id="signupEmail" placeholder=" " required>
+                    <label>Email Address</label>
+                </div>
+                <div class="auth-input-group">
+                    <input type="tel" id="signupPhone" placeholder=" " required>
+                    <label>Phone Number</label>
+                </div>
+                <div class="auth-input-group">
+                    <input type="password" id="signupPassword" placeholder=" " required>
+                    <label>Password</label>
+                </div>
+                <div class="auth-input-group">
+                    <input type="password" id="signupConfirmPassword" placeholder=" " required>
+                    <label>Confirm Password</label>
+                </div>
+                <button class="auth-submit" onclick="handleSignup()">CREATE ACCOUNT →</button>
+                <p class="auth-switch-text">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+            </div>
+        </div>
+    </div>
+        <!-- ===== BACK TO TOP BUTTON ===== -->
+    <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to Top">
+        <span class="back-to-top-icon">↑</span>
+        <span class="back-to-top-text">Top</span>
+    </button>
+        <!-- ===== WHATSAPP CHAT BUTTON (Matching Back to Top Style) ===== -->
+    <button id="whatsappBtn" class="whatsapp-chat-btn" aria-label="Chat on WhatsApp">
+        <span class="whatsapp-icon-main">💬</span>
+        <span class="whatsapp-text">WhatsApp</span>
+    </button>
+    <!-- ===== COOKIE CONSENT BANNER ===== -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <div class="cookie-icon">🍪</div>
+            <div class="cookie-text">
+                <strong>We value your privacy</strong>
+                <p>We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept", you consent to our use of cookies.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="cookie-btn accept">ACCEPT ✨</button>
+                <button id="declineCookies" class="cookie-btn decline">DECLINE</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
