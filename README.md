@@ -45,8 +45,7 @@ beacon-website/
 6. Visit `http://localhost/beacon/`
 
 ## 👨‍💻 Author
-[Your Name]
-[Your LinkedIn]
+[Ankita Singh]
 
 ## 📄 License
 MIT
